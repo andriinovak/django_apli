@@ -1,0 +1,20 @@
+{% extends "base.html" %}
+
+{% block html_title %}
+    Feedbacks for all users!
+{% endblock html_title %}
+
+{% block content %}
+    {% if has_contacted %}
+        <p>Thanks for your feedback</p>
+    {% endif %}
+    hello users
+    <ul>
+    {% for feedback in feedbacks %}
+        <li>{{ feedback.name }} - {{ feedback.text }} - {{ feedback.created_at|date:"D d M Y" }}</li>
+    {% empty %}
+        <li>We have not any feedbacks, be first</li>
+
+    {% endfor %}
+    </ul>
+{% endblock content %}

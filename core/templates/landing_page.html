@@ -1,0 +1,21 @@
+{% extends "base.html" %}
+
+{% block html_title %}
+    {{ block.super }} - {{ now }}
+{% endblock html_title %}
+
+
+{% block content %}
+
+<p>Hello {{name|title}}</p>
+    <p>{{ user.email }}</p>
+    <p>today {{now|date:"H: i d M Y"}}</p>
+    <h2>students</h2>
+    <ol>
+        {% for name in students %}
+            <li>{{name|title}}</li>
+        {% endfor %}
+
+    </ol>
+
+{% endblock content %}

@@ -1,0 +1,14 @@
+{% extends "base.html" %}
+
+{% block html_title %}
+    Contact us, PLEASE!
+{% endblock html_title %}
+
+{% block content %}
+    <p>Last message: {{ message }}</p>
+    <form action="/contact_us/" method="POST">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <input type="submit" value="Submit" />
+    </form>
+{% endblock content %}

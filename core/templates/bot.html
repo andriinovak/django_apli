@@ -1,0 +1,26 @@
+{% extends "base.html" %}
+
+{% block html_title %}
+    Bot {{ bot.name }}
+{% endblock html_title %}
+
+{% block content %}
+    <h2>Bot {{bot.name}}</h2>
+
+    <a href=https://t.me/{{bot.bot_name}} target="_blank">
+<!--                <a href="tg://resolve?domain={{subject.bot_name}}">-->
+    <img src="https://cdn3.iconfinder.com/data/icons/social-media-chamfered-corner/154/telegram-512.png" width="16px" height="16px" title="Telegram_bot: {{subject.name}}" alt="Telegram icon">
+    <b>{{bot.name}}</b>
+    </a>
+    <p>{{bot.description}}</p>
+    <hr>
+    <p><i>Автор: </i><a href="/subjects?author={{bot.author.name}}">{{bot.author.name}}</a>
+        <a href="//{{bot.author.webpage}}">
+        <img src="https://cdn3.iconfinder.com/data/icons/network-and-communications-10/32/network_Browser_global_network_planet_webpage_globe-512.png" width="16px" height="16px" title="Web_page: {{bot.author.webpage}}" alt="Web page">
+        </a>
+         <a href="mailto:{{bot.author.email}}">
+        <img src="https://cdn3.iconfinder.com/data/icons/linecons-free-vector-icons-pack/32/mail-512.png" width="16px" height="16px" title="Email: {{bot.author.email}}" alt="Email author">
+        </a>
+    </p>
+
+{% endblock content %}
