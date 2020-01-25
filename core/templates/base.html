@@ -7,6 +7,19 @@
     <title>{% block html_title %}Default title{% endblock html_title %}</title>
 </head>
 <body>
+     <header>
+        <table bgcolor="#c0c0c0"  width="100%">
+            <tr>
+                <td><h1><a href="/">My First Website!</a></h1></td>
+                <td><a href="/subjects/">Боти ЗНО</a></td>
+                <td><a href="/contact_us/">Contacts</a></td>
+                <td><a href="/feedbacks/">Feedbacks</a></td>
+                <td><a href="/about_us/">About</a></td>
+                <td><a href="/admin/">Admin</a></td>
+            </tr>
+        </table>
+    </header>
+
     {% block content %}
     {% endblock content %}
 </body>
